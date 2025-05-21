@@ -1,0 +1,100 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="consultancy,Evolve,manpower" />
+    <meta name="description" content="this is evolve consultancy website" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <!-- icons link-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>evolve Consultancy</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="{% static 'photos/logo.jpg' %}" alt="Logo" class="logo-img" />
+        <span class="site-name">Evolve Consultancy</span>
+      </div>
+      <div class="burger" onclick="toggleMenu()">☰</div>
+    </div>
+    <nav class="navbar" id="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Client</a></li>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">Achievement</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <hr>
+
+  <main>
+   <section class="carousel">
+  <div class="slides">
+    <div class="slide">
+      <img src="{% static 'photos/Ev6-m6.jpg' %}" alt="Slide 1" />
+      <div class="caption">Blessing Consultancy</div>
+    </div>
+    <div class="slide">
+      <img src="{% static 'photos/Seltos-m3.jpg' %}" alt="Slide 2" />
+      <div class="caption">Blessing Consultancy</div>
+    </div>
+    <div class="slide">
+      <img src="{% static 'photos/syros-m5.webp' %}" alt="Slide 3" />
+      <div class="caption">Blessing Consultancy</div>
+    </div>
+  </div>
+</section>
+ 
+<section>
+  
+</section>
+<section>
+      <!-- Your contact -->
+                 <h1>Contact Us</h1>
+
+         <div class="contact-info">
+          <div class="contact-item">
+            <i class="fa fa-facebook"></i>
+            <a href="https://facebook.com/yourpage" class="contact-link" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </div>
+      
+          <div class="contact-item">
+            <i class="fa fa-instagram"></i>
+            <a href="https://instagram.com/yourprofile" class="contact-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+      
+          <div class="contact-item">
+            <i class="fa fa-whatsapp"></i>
+            <a href="https://wa.me/1234567890" class="contact-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
+      
+          <div class="contact-item">
+            <i class="fa fa-youtube"></i>
+            <a href="https://youtube.com/yourchannel" class="contact-link" target="_blank" rel="noopener noreferrer">YouTube</a>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa fa-mobile"></i>
+            <a href="tel:+1234567890" class="contact-link">+1 234 567 890</a>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:contact@yourdomain.com" class="contact-link">contact@yourdomain.com</a>
+          </div>
+        </div>
+
+    </section>
+  </main>
+
+  <script src="{% static 'script.js' %}" defer></script>
+</body>
+</html>

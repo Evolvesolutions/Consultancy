@@ -1,0 +1,231 @@
+
+/* style page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fdfdfd;
+  color: #000000;
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  background-color: #000;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Container for logo and burger */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.site-name {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #fafafa;
+}
+
+/* Burger Menu */
+.burger {
+  display: none;
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 5px 30px;
+  justify-content:right;
+}
+
+/* Nav links with violet fill hover */
+.navbar ul li a {
+  position: relative;
+  padding: 4px 15px;
+  font-size: 20px;
+  color: rgb(56, 247, 221);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Background fill with ::before */
+.navbar ul li a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff;
+  border-radius: 6px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+  z-index: -1;
+}
+
+/* On hover: fill background from left to right, and change text color */
+.navbar ul li a:hover::before {
+  transform: scaleX(1);
+}
+
+.navbar ul li a:hover {
+  color: #000000;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+  .logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+  .site-name {
+  font-size: 1.3rem;
+}
+.burger {
+  font-size: 1.5rem;
+}
+  .navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 0px 0;
+  }
+
+  .navbar ul li a {
+    font-size: 1rem;
+    padding: 5px 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+  }
+}
+
+/* carousel */
+/* Carousel Styles */
+.carousel {
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 100%; /* Adjust if more/less slides */
+  height: 100%;
+  transition: transform 1s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes the image cover the full screen */
+}
+
+/* Caption inside each slide */
+.caption {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 24px;
+  border-radius: 10px;
+}
+
+/*contact page styling*/
+    .contact-info {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+
+    .contact-item i {
+      font-size: 28px;
+      color: #003fb5; /* default icon color */
+      width: 40px;
+      text-align: center;
+      margin-right: 15px;
+    }
+
+    /* Individual icon colors */
+    .fa-facebook { color: #3b5998; }
+    .fa-instagram { color: #e4405f; }
+    .fa-whatsapp { color: #25d366; }
+    .fa-youtube { color: #ff0000; }
+    .fa-mobile { color: #555; }
+    .fa-envelope { color: #dd4b39; }
+
+    /* Links styling */
+    a.contact-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a.contact-link:hover {
+      text-decoration: underline;
+    }
+/* ------------- footer page styling ------------ */
