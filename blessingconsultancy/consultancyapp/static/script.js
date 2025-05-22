@@ -31,3 +31,4 @@ function showNextSlide() {
 
 // Slide every 3 seconds
 setInterval(showNextSlide, 3000);
+
