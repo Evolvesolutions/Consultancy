@@ -13,25 +13,6 @@
     <title>evolve Consultancy</title>
 </head>
 <body>
-<<<<<<< HEAD
-  <header class="header">
-    <div class="container">
-      <div class="logo">
-        <img src="{% static 'photos/logo.jpg' %}" alt="Logo" class="logo-img" />
-        <span class="site-name">Evolve Consultancy</span>
-      </div>
-      <div class="burger" onclick="toggleMenu()">☰</div>
-    </div>
-    <nav class="navbar" id="navbar">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Service</a></li>
-        <li><a href="{%url 'client'%}">Client</a></li>
-        <li><a href="#">Career</a></li>
-        <li><a href="#">Achievement</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-=======
   <header>
     <div class="logo">
           <img style="margin-right: 10px;" src="{% static 'photos/logo.jpg' %}" alt="Logo" class="logo-img"  height="40px" width="40px"/>
@@ -41,13 +22,12 @@
     <nav>
       <ul id="menu">
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">Service</a></li>
-        <li><a href="#service">Client</a></li>
+        <li><a href="{% url 'service' %}">Service</a></li>
         <li><a href="#company">Carrers</a></li>
+        <li><a href="#">Client</a></li>
         <li><a href="#achivement">Achivement</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact Us</a></li>
->>>>>>> 8c3abfc1844bf3faa6c66849a8392a38a3ead274
       </ul>
     </nav>
   </header>
@@ -160,11 +140,6 @@
       <button  style="text-align: center;margin-left: 45%;" type="submit">Submit</button>
     </form>
 
-<<<<<<< HEAD
-    </section>
-    
-=======
->>>>>>> 8c3abfc1844bf3faa6c66849a8392a38a3ead274
   </main>
 
   <footer class="footer">

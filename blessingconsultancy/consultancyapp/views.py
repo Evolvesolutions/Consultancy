@@ -5,3 +5,6 @@ def home(request):
     return render(request,"home.html")
 def client(request):
     return render(request, "client.html")
+def service(request):
+    return render(request, "service.html")
+
