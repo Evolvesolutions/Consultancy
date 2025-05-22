@@ -1,0 +1,188 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Careers | Blessings Consultancy</title>
+ <link rel="stylesheet" href="{% static 'style.css' %}" />
+</head>
+<body>
+<section class="heros">
+    <div>
+  <h1>🌟 Careers at Blessings Consultancy</h1>
+  <p>Find your dream job and grow with us. Apply today!</p>
+    </div>
+</section>
+<section class="cards-section">
+  <h2>💼 Open Positions</h2>
+  <div class="cards-container">
+    <div class="card">
+      <h3>Software Developer</h3>
+      <p>Guide students and professionals in choosing the right path.</p>
+      <a href="#apply"><button>Apply Now</button></a>
+    </div>
+    <div class="card">
+      <h3>Visa Consultant</h3>
+      <p>Support clients through the visa and documentation process.</p>
+      <a href="#apply"><button>Apply Now</button></a>
+    </div>
+    <div class="card">
+      <h3>Admin Executive</h3>
+      <p>Manage office tasks and support internal operations.</p>
+      <a href="#apply"><button>Apply Now</button></a>
+    </div>
+    <div class="card">
+      <h3>Training Coordinator</h3>
+      <p>Plan and coordinate training sessions for clients.</p>
+      <a href="#apply"><button>Apply Now</button></a>
+    </div>
+    <div class="card">
+      <h3>Marketing Executive</h3>
+      <p>Run campaigns and grow brand awareness.</p>
+      <a href="#apply"><button>Apply Now</button></a>
+    </div>
+    <div class="card">
+      <h3>Others</h3>
+      <p>If you want any job you can send details below form</p>
+      <a href="#apply"><button>Apply Now</button></a>
+    </div>
+  </div>
+</section>
+<section id="apply">
+  <h2 style="text-align: center; font-size: 32px;">📝 Apply Now</h2><br><br>
+
+  <div class="form-container">
+    <form id="applicationForm">
+      <div class="form-row">
+        <!-- Left Column -->
+        <div class="form-column">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" required>
+        </div>
+
+        <!-- Right Column -->
+        <div class="form-column">
+          <label for="position">Position Applied For</label>
+          <select id="position" required>
+            <option value="">-- Select a Job --</option>
+            <option value="Software Developer">Software Developer</option>
+            <option value="Visa Consultant">Visa Consultant</option>
+            <option value="Admin Executive">Admin Executive</option>
+            <option value="Training Coordinator">Training Coordinator</option>
+            <option value="Marketing Executive">Marketing Executive</option>
+            <option value="Others">Others</option>
+          </select>
+
+          <label for="resume">Upload Resume</label>
+          <input type="file" id="resume" required>
+
+          <label for="message">Message Box</label>
+          <textarea id="message" rows="4"></textarea>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="submit-btn-wrapper">
+        <button type="submit">Submit Application</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- footer page -->
+  <footer style="background-color: #1a1a1a;color: #fdfdfd;" class="footer">
+    <div class="footer-container">
+      
+      <!-- About Section -->
+      <div class="footer-section about">
+        <h2>About Us</h2>
+        <p>We are a trusted consultancy firm offering IT services, career guidance, and business solutions to elevate your growth.</p>
+        <ul>
+          <li><a href="#">Mission</a></li>
+          <li><a href="#">Vision</a></li>
+        </ul>
+
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section services">
+        <h2>Our Services</h2>
+        <ul>
+          <li>Event Management</li>
+          <li>IT Consulting</li>
+          <li>Man Power</li>
+          <li>Modeling</li>
+          <li>Real Estate</li>
+          <li>Finaning</li>
+        </ul>
+      </div>
+
+      <!-- Clients -->
+      <div class="footer-section clients">
+        <h2>Our Clients</h2>
+        <ul>
+          <li>Career Solution</li>
+          <li>HBD</li>
+          <li>Credit Bee</li>
+          <li>IT Solution</li>
+          <li>Yawy Tech Solution</li>
+        </ul>
+      </div>
+      <!-- Contact Info -->
+      <div class="footer-section contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@yourconsultancy.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Location: Olympia, Guindy, Chennai</p>
+
+        <!-- Social Media Icons -->
+        <div class="social-wrapper">
+          <a href="https://facebook.com/yourpage" target="_blank" class="social-item">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="https://instagram.com/yourprofile" target="_blank" class="social-item">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/1234567890" target="_blank" class="social-item">
+            <i class="fa fa-whatsapp"></i>
+          </a>
+          <a href="https://youtube.com/yourchannel" target="_blank" class="social-item">
+            <i class="fa fa-youtube-play"></i>
+          </a>
+          <a href="tel:+1234567890" class="social-item">
+            <i class="fa fa-mobile"></i>
+          </a>
+          <a href="mailto:contact@yourdomain.com" class="social-item">
+            <i class="fa fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 YourConsultancy. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

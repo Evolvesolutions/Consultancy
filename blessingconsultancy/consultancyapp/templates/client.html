@@ -1,0 +1,100 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Infinite Auto Scroll Cards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #achievements {
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .scroll-container {
+      display: flex;
+      overflow-x: hidden; /* Hide native scroll bar */
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .scroll-wrapper {
+      display: flex;
+      animation: scroll 30s linear infinite;
+    }
+
+    .card {
+      min-width: 200px;
+      flex-shrink: 0;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 10px;
+      margin-right: 20px;
+    }
+
+    .card img {
+      width: 100px;
+      border-radius: 10px;
+    }
+
+    .card p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section id="achievements">
+  <h2 style="text-align: center;">Our Clients</h2>
+  <div class="scroll-container" id="cardScroll">
+    <div class="scroll-wrapper" id="scrollWrapper">
+      <!-- Original Cards -->
+      <div class="card"><h4>Career Solutions</h4><img src="{%static 'images/image1.png'%}" alt="" style="padding: 30px"><p>Complete Manpower Solutions</p></div>
+      
+      <div class="card"><h4>Yawy Tech Solution</h4><img src="{%static 'images/yawy.png'%}" alt=""><p>Transforming Businesses with <br/> Software Solutions</p></div>
+      
+      <div class="card"><h4>HBD</h4><img src="{%static 'images/hbd.png'%}" alt=""><p>Top Performer</p></div>
+      
+        <div class="card"><h4>Flinto Box</h4><img src="{%static 'images/flintobox.png'%}" alt=""><p>Power yourchild with <br/>Hands-On Learning</p></div>
+      
+        <div class="card"><h4>Chargebeeh</h4><img src="{%static 'images/chargebee.png'%}" alt="" style="width: 200px; height: auto; padding-top: 10px; padding-bottom: 10px;"><p>Automate crucial parts of <br/>your revenue workflow</p></div>
+      
+        <div class="card"><h4>Skill Lync</h4><img src="{%static 'images/skilllync.png'%}" alt="" style="padding-top: 20px; padding-bottom: 20px;"><p>Placement Opportunities</p></div>
+      
+        <div class="card"><h4>Spacekids</h4><img src="{%static 'images/spacekids.png'%}" alt=""><p>Spacekids Global Mission</p></div>
+      <div class="card"><h4>Spinta digital</h4><img src="{%static 'images/spinta.png'%}" alt=""><p>Your Growth Partner</p></div>
+      <!-- Cloned Cards will be added via JS -->
+    </div>
+  </div>
+</section>
+
+<script>
+  const scrollWrapper = document.getElementById('scrollWrapper');
+  const cards = scrollWrapper.innerHTML;
+
+  // Clone the cards once to allow seamless scroll
+  scrollWrapper.innerHTML += cards;
+</script>
+
+</body>
+</html>

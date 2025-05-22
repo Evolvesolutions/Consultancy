@@ -22,9 +22,9 @@
     <nav>
       <ul id="menu">
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">Service</a></li>
-        <li><a href="#service">Client</a></li>
-        <li><a href="#company">Carrers</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#clients">Client</a></li>
+        <li><a href="{%url 'carrier' %}">Carrier</a></li>
         <li><a href="#achivement">Achivement</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact Us</a></li>
@@ -33,21 +33,107 @@
   </header>
    
   <hr style="position: sticky;top: 30px;">
+  <br id="home">
+  <br>
+  <br>
+  <br>
 
   <main>
    <section class="carousel">
   <div class="slides">
     <div class="slide">
-      <img src="{% static 'photos/Ev6-m6.jpg' %}" alt="Slide 1" />
+      <img src="{% static 'photos/home-baner.jpg' %}" alt="Slide 1" />
       <div class="caption">Blessing Consultancy</div>
     </div>
     <div class="slide">
-      <img src="{% static 'photos/Seltos-m3.jpg' %}" alt="Slide 2" />
+      <img src="{% static 'photos/Service-baner.jpg' %}" alt="Slide 2" />
       <div class="caption">Blessing Consultancy</div>
     </div>
     <div class="slide">
       <img src="{% static 'photos/syros-m5.webp' %}" alt="Slide 3" />
       <div class="caption">Blessing Consultancy</div>
+    </div>
+  </div>
+</section>
+ </section>
+ <!-- your service  -->
+  <section id="service">
+     <div class="container">
+        <h1>Our Services</h1>
+        <div class="services">
+            <div class="service-box">
+                <h2>Recruitment</h2>
+                <p>We help organizations find skilled professionals through a structured and efficient recruitment process for top talent acquisition.</p>
+            </div>
+            <div class="service-box">
+                <h2>Manpower</h2>
+                <p>Providing reliable manpower services across industries, ensuring timely support with the right skills and dedicated workforce.</p>
+            </div>
+            <div class="service-box">
+                <h2>Event Management</h2>
+                <p>Comprehensive event planning and execution services, delivering memorable experiences for corporate and personal celebrations effectively.</p>
+            </div>
+            <div class="service-box">
+                <h2>Real Estate</h2>
+                <p>Assisting clients in buying, selling, and renting properties with transparency and professional real estate consultation services.</p>
+            </div>
+            <div class="service-box">
+                <h2>College Admission</h2>
+                <p>We offer digital and physical administrative support for colleges, improving workflow, efficiency, and educational management operations.</p>
+            </div>
+            <div class="service-box">
+                <h2>Modeling</h2>
+                <p>Talent scouting, grooming, and promoting models for fashion shows, advertisements, and brand promotions through expert industry networks.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+ <br>
+ <!-- clients -->
+  <section id="clients">
+  <h2 style="text-align: center;">Our Clients</h2>
+  <div class="scroll-container" id="cardScroll">
+    <div class="scroll-wrapper" id="scrollWrapper">
+      <!-- Original Cards -->
+      <div class="card"><h4>Career Solutions</h4><img src="{%static 'images/image1.png'%}" alt="" style="padding: 30px"><p>Complete Manpower Solutions</p></div>
+      
+      <div class="card"><h4>Yawy Tech Solution</h4><img src="{%static 'images/yawy.png'%}" alt=""><p>Transforming Businesses with <br/> Software Solutions</p></div>
+      
+      <div class="card"><h4>HBD</h4><img src="{%static 'images/hbd.png'%}" alt=""><p>Top Performer</p></div>
+      
+        <div class="card"><h4>Flinto Box</h4><img src="{%static 'images/flintobox.png'%}" alt=""><p>Power yourchild with <br/>Hands-On Learning</p></div>
+      
+        <div class="card"><h4>Chargebeeh</h4><img src="{%static 'images/chargebee.png'%}" alt="" style="width: 200px; height: auto; padding-top: 10px; padding-bottom: 10px;"><p>Automate crucial parts of <br/>your revenue workflow</p></div>
+      
+        <div class="card"><h4>Skill Lync</h4><img src="{%static 'images/skilllync.png'%}" alt="" style="padding-top: 20px; padding-bottom: 20px;"><p>Placement Opportunities</p></div>
+      
+        <div class="card"><h4>Spacekids</h4><img src="{%static 'images/spacekids.png'%}" alt=""><p>Spacekids Global Mission</p></div>
+      <div class="card"><h4>Spinta digital</h4><img src="{%static 'images/spinta.png'%}" alt=""><p>Your Growth Partner</p></div>
+      <!-- Cloned Cards will be added via JS -->
+    </div>
+  </div>
+</section>
+<script>
+  const scrollWrapper = document.getElementById('scrollWrapper');
+  const cards = scrollWrapper.innerHTML;
+
+  // Clone the cards once to allow seamless scroll
+  scrollWrapper.innerHTML += cards;
+</script>
+
+
+<!-- achivement page -->
+    <h2 style="text-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black, -2px -2px 2px black; text-align: center;padding-bottom: 20px;font-size: 38px;color: #e4ac33;" id="achivement">Achivement</h2>
+ <section class="achievement-section"> 
+  <div class="achievement-container">
+    <img src="{% static 'photos/achivement.jpg' %}" class="achievement-img" style="height: 30%;" alt="Achievement Image">
+    
+    <div class="achievement-banner">
+      <h2 class="achievement-title">1000+ Happy Customers</h2>
+      <p class="achievement-para">
+        We are proud to have served over a thousand happy customers with reliable consultancy solutions. 
+        Our dedication to excellence, client-first approach, and innovative services continue to make a difference every day.
+      </p>
     </div>
   </div>
 </section>
@@ -59,7 +145,7 @@
     <img src="{% static 'photos/about-con-img.jpg' %}" alt="About Blessing Consultancy">
     <div class="about-content">
       <h1><i class="fa fa-users"></i> About Us</h1>
-      <p>
+      <p style="color: #fdfdfd;">
         Welcome to <strong>Blessing Consultancy</strong>, your trusted partner in career guidance, education support, and professional
         development. We are committed to helping students, job seekers, and professionals achieve their
         goals through personalized consultancy services. With a
@@ -85,12 +171,11 @@
     </div>
   </div>
 </section>
-<!-- your client page -->
- </section>
 <hr id="contact">
+
 <section id="contact">
       <!-- Your contact -->
-                 <h1 style="text-align: center;padding-bottom: 20px;font-size: 28px;">Contact Us</h1>
+        <h1 style="text-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black, -2px -2px 2px black; text-align: center;padding-bottom: 20px;font-size: 28px;color: #f3f2ef;">Contact Us</h1>
         <div>
          <section>
  
@@ -141,8 +226,8 @@
     </form>
 
   </main>
-
-  <footer class="footer">
+   <!-- footer page -->
+  <footer style="background-color: #1a1a1a;color: #fdfdfd;" class="footer">
     <div class="footer-container">
       
       <!-- About Section -->
