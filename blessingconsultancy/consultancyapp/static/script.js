@@ -1,9 +1,8 @@
 // Toggle menu (already added earlier)
-function toggleMenu() {
-  const navbar = document.getElementById('navbar');
-  navbar.classList.toggle('show');
-}
-
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+  }
 // Carousel slideshow
 const slides = document.querySelector('.slides');
 const slideCount = document.querySelectorAll('.slide').length;
@@ -31,3 +30,24 @@ function showNextSlide() {
 
 // Slide every 3 seconds
 setInterval(showNextSlide, 3000);
+
+/* form validation */
+
+  function validateForm() {
+    const mobile = document.getElementById("mobile").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mobileRegex = /^[0-9]{10}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!mobileRegex.test(mobile)) {
+      alert("Please enter a valid 10-digit mobile number.");
+      return false;
+    }
+
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+
+    return true; // submit form
+  }
