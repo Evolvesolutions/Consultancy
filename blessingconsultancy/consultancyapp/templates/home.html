@@ -13,6 +13,7 @@
     <title>evolve Consultancy</title>
 </head>
 <body>
+<<<<<<< HEAD
   <header class="header">
     <div class="container">
       <div class="logo">
@@ -30,10 +31,28 @@
         <li><a href="#">Achievement</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
+=======
+  <header>
+    <div class="logo">
+          <img style="margin-right: 10px;" src="{% static 'photos/logo.jpg' %}" alt="Logo" class="logo-img"  height="40px" width="40px"/>
+          <br>
+          <p>blessing consultancy</p></div>
+       <div class="burger" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Service</a></li>
+        <li><a href="#service">Client</a></li>
+        <li><a href="#company">Carrers</a></li>
+        <li><a href="#achivement">Achivement</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+>>>>>>> 8c3abfc1844bf3faa6c66849a8392a38a3ead274
       </ul>
     </nav>
   </header>
-  <hr>
+   
+  <hr style="position: sticky;top: 30px;">
 
   <main>
    <section class="carousel">
@@ -53,48 +72,188 @@
   </div>
 </section>
  
-<section>
-  
+<section class="about-section" id="about">
+  <!-- About Header with Image Background -->
+  <div class="about-header">
+    <div class="about-overlay"></div>
+    <img src="{% static 'photos/about-con-img.jpg' %}" alt="About Blessing Consultancy">
+    <div class="about-content">
+      <h1><i class="fa fa-users"></i> About Us</h1>
+      <p>
+        Welcome to <strong>Blessing Consultancy</strong>, your trusted partner in career guidance, education support, and professional
+        development. We are committed to helping students, job seekers, and professionals achieve their
+        goals through personalized consultancy services. With a
+        team of experienced mentors and a strong belief in empowering individuals, Blessing Consultancy has become a name known for trust and transformation.
+        We specialize in providing expert advice in education, career planning, IT training, and personality development. Our approach is friendly, supportive, and centered around your success.
+      </p>
+    </div>
+  </div>
+  <!-- Mission and Vision Section -->
+  <div class="info-section">
+    <div class="info-card mission">
+      <h2><i class="fa fa-bullseye"></i> Mission</h2>
+      <p>
+        To provide reliable, affordable, and result-oriented consultancy services that empower individuals to grow, learn, and succeed in their educational and professional journeys. We strive to deliver high-quality guidance, training, and support through expert mentoring and customized solutions.
+      </p>
+    </div>
+    <hr>
+    <div class="info-card vision">
+      <h2><i class="fa fa-eye"></i> Vision</h2>
+      <p>
+        To become a leading consultancy firm recognized for transforming lives by guiding individuals towards the right path and helping them achieve their dreams with confidence and clarity.
+      </p>
+    </div>
+  </div>
 </section>
-<section>
+<!-- your client page -->
+ </section>
+<hr id="contact">
+<section id="contact">
       <!-- Your contact -->
-                 <h1>Contact Us</h1>
-
-         <div class="contact-info">
-          <div class="contact-item">
-            <i class="fa fa-facebook"></i>
-            <a href="https://facebook.com/yourpage" class="contact-link" target="_blank" rel="noopener noreferrer">Facebook</a>
-          </div>
-      
-          <div class="contact-item">
-            <i class="fa fa-instagram"></i>
-            <a href="https://instagram.com/yourprofile" class="contact-link" target="_blank" rel="noopener noreferrer">Instagram</a>
-          </div>
-      
-          <div class="contact-item">
-            <i class="fa fa-whatsapp"></i>
-            <a href="https://wa.me/1234567890" class="contact-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          </div>
-      
-          <div class="contact-item">
-            <i class="fa fa-youtube"></i>
-            <a href="https://youtube.com/yourchannel" class="contact-link" target="_blank" rel="noopener noreferrer">YouTube</a>
-          </div>
-
-          <div class="contact-item">
-            <i class="fa fa-mobile"></i>
-            <a href="tel:+1234567890" class="contact-link">+1 234 567 890</a>
-          </div>
-
-          <div class="contact-item">
-            <i class="fa fa-envelope"></i>
-            <a href="mailto:contact@yourdomain.com" class="contact-link">contact@yourdomain.com</a>
-          </div>
+                 <h1 style="text-align: center;padding-bottom: 20px;font-size: 28px;">Contact Us</h1>
+        <div>
+         <section>
+ 
+  <div style="border: 2px solid #646161; border-radius: 15px 15px ;overflow: hidden;" class="contact-container">
+   
+    <form id="contactForm" onsubmit="return validateForm()">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
         </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" placeholder="Enter your age" required>
+        </div>
+      </div>
 
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile Number</label>
+          <input type="text" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="qualification">Qualification</label>
+          <input type="text" id="qualification" name="qualification" placeholder="Enter your education qualification" required>
+        </div>
+        <div class="form-group">
+          <label for="experience">Experience (Optional)</label>
+          <input type="text" id="experience" name="experience" placeholder="Experience (if any)">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group full-width">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
+        </div>
+      </div>
+
+      <button  style="text-align: center;margin-left: 45%;" type="submit">Submit</button>
+    </form>
+
+<<<<<<< HEAD
     </section>
     
+=======
+>>>>>>> 8c3abfc1844bf3faa6c66849a8392a38a3ead274
   </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <!-- About Section -->
+      <div class="footer-section about">
+        <h2>About Us</h2>
+        <p>We are a trusted consultancy firm offering IT services, career guidance, and business solutions to elevate your growth.</p>
+        <ul>
+          <li><a href="#">Mission</a></li>
+          <li><a href="#">Vision</a></li>
+        </ul>
+
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section services">
+        <h2>Our Services</h2>
+        <ul>
+          <li>Event Management</li>
+          <li>IT Consulting</li>
+          <li>Man Power</li>
+          <li>Modeling</li>
+          <li>Real Estate</li>
+          <li>Finaning</li>
+        </ul>
+      </div>
+
+      <!-- Clients -->
+      <div class="footer-section clients">
+        <h2>Our Clients</h2>
+        <ul>
+          <li>Career Solution</li>
+          <li>HBD</li>
+          <li>Credit Bee</li>
+          <li>IT Solution</li>
+          <li>Yawy Tech Solution</li>
+        </ul>
+      </div>
+      <!-- Contact Info -->
+      <div class="footer-section contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@yourconsultancy.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Location: Olympia, Guindy, Chennai</p>
+
+        <!-- Social Media Icons -->
+        <div class="social-wrapper">
+          <a href="https://facebook.com/yourpage" target="_blank" class="social-item">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="https://instagram.com/yourprofile" target="_blank" class="social-item">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/1234567890" target="_blank" class="social-item">
+            <i class="fa fa-whatsapp"></i>
+          </a>
+          <a href="https://youtube.com/yourchannel" target="_blank" class="social-item">
+            <i class="fa fa-youtube-play"></i>
+          </a>
+          <a href="tel:+1234567890" class="social-item">
+            <i class="fa fa-mobile"></i>
+          </a>
+          <a href="mailto:contact@yourdomain.com" class="social-item">
+            <i class="fa fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 YourConsultancy. All rights reserved.</p>
+    </div>
+  </footer>
+
 
   <script src="{% static 'script.js' %}" defer></script>
 </body>
