@@ -22,15 +22,9 @@
     <nav>
       <ul id="menu">
         <li><a href="#home">Home</a></li>
-<<<<<<< HEAD
         <li><a href="#service">Service</a></li>
+        <li><a href="{% url 'carrier' %}">Careers</a></li>
         <li><a href="#clients">Client</a></li>
-        <li><a href="{%url 'carrier' %}">Carrier</a></li>
-=======
-        <li><a href="{% url 'service' %}">Service</a></li>
-        <li><a href="#company">Carrers</a></li>
-        <li><a href="#">Client</a></li>
->>>>>>> cf9ac3d0e989d76fd4fe8c3841e66866acc7467b
         <li><a href="#achivement">Achivement</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact Us</a></li>
@@ -49,23 +43,22 @@
   <div class="slides">
     <div class="slide">
       <img src="{% static 'photos/home-baner.jpg' %}" alt="Slide 1" />
-      <div class="caption">Blessing Consultancy</div>
+      <!-- <div class="caption">Blessing Consultancy</div> -->
     </div>
     <div class="slide">
-      <img src="{% static 'photos/Service-baner.jpg' %}" alt="Slide 2" />
-      <div class="caption">Blessing Consultancy</div>
+      <img src="{% static 'photos/nservice.jpg' %}" alt="Slide 2" />
+      <!-- <div class="caption">Blessing Consultancy</div> -->
     </div>
     <div class="slide">
-      <img src="{% static 'photos/syros-m5.webp' %}" alt="Slide 3" />
-      <div class="caption">Blessing Consultancy</div>
+      <img src="{% static 'photos/nachivement.jpg' %}" alt="Slide 3" />
+      <!-- <div class="caption">Blessing Consultancy</div> -->
     </div>
   </div>
 </section>
- </section>
- <!-- your service  -->
+<!-- service -->
   <section id="service">
      <div class="container">
-        <h1>Our Services</h1>
+        <h1 style="text-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black, -2px -2px 2px black; text-align: center;padding-bottom: 20px;font-size: 28px;color: #f3f2ef;">Our Services</h1>
         <div class="services">
             <div class="service-box">
                 <h2>Recruitment</h2>
@@ -97,7 +90,7 @@
  <br>
  <!-- clients -->
   <section id="clients">
-  <h2 style="text-align: center;">Our Clients</h2>
+  <h2 style="text-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black, -2px -2px 2px black; text-align: center;padding-bottom: 20px;font-size: 28px;color: #f3f2ef;">Our Clients</h2>
   <div class="scroll-container" id="cardScroll">
     <div class="scroll-wrapper" id="scrollWrapper">
       <!-- Original Cards -->
@@ -129,7 +122,7 @@
 
 
 <!-- achivement page -->
-    <h2 style="text-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black, -2px -2px 2px black; text-align: center;padding-bottom: 20px;font-size: 38px;color: #e4ac33;" id="achivement">Achivement</h2>
+    <h2 style="text-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black, -2px -2px 2px black; text-align: center;padding-bottom: 20px;font-size: 38px;color: #ffffff;" id="achivement">Achivement</h2>
  <section class="achievement-section"> 
   <div class="achievement-container">
     <img src="{% static 'photos/achivement.jpg' %}" class="achievement-img" style="height: 30%;" alt="Achievement Image">
@@ -187,7 +180,8 @@
  
   <div style="border: 2px solid #646161; border-radius: 15px 15px ;overflow: hidden;" class="contact-container">
    
-    <form id="contactForm" onsubmit="return validateForm()">
+    <form id="contactForm" onsubmit="return validateForm()" method="post" action="{% url 'submit' %}">
+      {% csrf_token %}
       <div class="form-row">
         <div class="form-group">
           <label for="name">Full Name</label>
@@ -230,7 +224,7 @@
 
       <button  style="text-align: center;margin-left: 45%;" type="submit">Submit</button>
     </form>
-
+     </section> <!-- close contact -->
   </main>
    <!-- footer page -->
   <footer style="background-color: #1a1a1a;color: #fdfdfd;" class="footer">
@@ -321,6 +315,6 @@
   </footer>
 
 
-  <script src="{% static 'script.js' %}" defer></script>
+  <script src="{% static 'scripting.js' %}"></script>
 </body>
 </html>

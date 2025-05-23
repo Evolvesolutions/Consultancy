@@ -3,10 +3,10 @@ from . import views
 
 urlpatterns =[
     path("",views.home,name="home"),
-<<<<<<< HEAD
-    path("carrier/", views.carrier, name="carrier"),
-=======
-    path("client/", views.client, name = "client"),
-    path("service/", views.service, name = "service"),
->>>>>>> cf9ac3d0e989d76fd4fe8c3841e66866acc7467b
+    # path("client/", views.client, name = "client"),
+    path("carrier/", views.carrier, name = "carrier"),
+    path('submit/',views.submit, name = "submit"),
+    path('registration_success/',views.registration_success, name='registration_success'),
+    path('submission/',views.submission, name = 'submission'),
+    # path('carrier/success/',views.su)
 ]

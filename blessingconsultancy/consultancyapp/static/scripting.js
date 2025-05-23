@@ -31,8 +31,6 @@ function showNextSlide() {
 // Slide every 3 seconds
 setInterval(showNextSlide, 3000);
 
-<<<<<<< HEAD
-=======
 /* form validation */
 
   function validateForm() {
@@ -53,4 +51,3 @@ setInterval(showNextSlide, 3000);
 
     return true; // submit form
   }
->>>>>>> 8c3abfc1844bf3faa6c66849a8392a38a3ead274

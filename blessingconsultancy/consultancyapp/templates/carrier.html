@@ -5,13 +5,31 @@
   <meta charset="UTF-8">
   <title>Careers | Blessings Consultancy</title>
  <link rel="stylesheet" href="{% static 'style.css' %}" />
+ <!-- icons -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
 <section class="heros">
-    <div>
+  <li style="position: absolute;
+               list-style: none;
+               border-radius: 10%;
+               padding: 4px 8px;
+               z-index: 5px;
+               float: right;
+               margin-top: 4px;
+               font-weight: bold;
+               margin-left: 92%;
+               background-color: rgb(209, 9, 216);
+               border: 1px solid black;
+               font-size: 25px; ">
+      <a  style="text-decoration: none;color: #fdfdfd;" href="{% url 'home' %}">Home</a></li>  
+  <div>
   <h1>🌟 Careers at Blessings Consultancy</h1>
   <p>Find your dream job and grow with us. Apply today!</p>
     </div>
+    
 </section>
 <section class="cards-section">
   <h2>💼 Open Positions</h2>
@@ -52,24 +70,25 @@
   <h2 style="text-align: center; font-size: 32px;">📝 Apply Now</h2><br><br>
 
   <div class="form-container">
-    <form id="applicationForm">
+    <form id="applicationForm" method="post" enctype="multipart/form-data" action="{% url 'submission' %}">
+      {% csrf_token %}
       <div class="form-row">
         <!-- Left Column -->
         <div class="form-column">
           <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" required>
+          <input type="text" id="fullname" name="fullname" required>
 
           <label for="email">Email</label>
-          <input type="email" id="email" required>
+          <input type="email" id="email" name="email" required>
 
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" required>
+          <input type="tel" id="phone" name = "phone"required>
         </div>
 
         <!-- Right Column -->
         <div class="form-column">
           <label for="position">Position Applied For</label>
-          <select id="position" required>
+          <select id="position" name = "position" required>
             <option value="">-- Select a Job --</option>
             <option value="Software Developer">Software Developer</option>
             <option value="Visa Consultant">Visa Consultant</option>
@@ -80,10 +99,10 @@
           </select>
 
           <label for="resume">Upload Resume</label>
-          <input type="file" id="resume" required>
-
+          <input type="file" id="resume" name = "resume" required>
+<!-- 
           <label for="message">Message Box</label>
-          <textarea id="message" rows="4"></textarea>
+          <textarea id="message" rows="4"></textarea> -->
         </div>
       </div>
 
@@ -114,11 +133,11 @@
       <div class="footer-section links">
         <h2>Quick Links</h2>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Clients</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#cantact">Contact Us</a></li>
         </ul>
       </div>
 
@@ -131,7 +150,7 @@
           <li>Man Power</li>
           <li>Modeling</li>
           <li>Real Estate</li>
-          <li>Finaning</li>
+          <li>Financing</li>
         </ul>
       </div>
 
@@ -153,7 +172,7 @@
         <p>Phone: +91 98765 43210</p>
         <p>Location: Olympia, Guindy, Chennai</p>
 
-        <!-- Social Media Icons -->
+           <!-- Social Media Icons -->
         <div class="social-wrapper">
           <a href="https://facebook.com/yourpage" target="_blank" class="social-item">
             <i class="fa fa-facebook"></i>
@@ -177,12 +196,13 @@
       </div>
     </div>
 
+
     <!-- Bottom Bar -->
     <div class="footer-bottom">
       <p>&copy; 2025 YourConsultancy. All rights reserved.</p>
     </div>
   </footer>
 
-<script src="script.js"></script>
+<!-- <script src="script.js"></script> -->
 </body>
 </html>
